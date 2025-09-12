@@ -88,50 +88,20 @@
     <a href="privacy.html">プライバシーポリシー</a>
   </nav>
 
-  <!-- ヒーローセクション -->
-  <section class="hero" id="hero">
-    <div class="hero-text">
-      <h1>株式会社LibeRal</h1>
-      <p>～自由で革新的な自動車の売買～</p>
-      <a href="#service" class="btn">サービスを見る</a>
-    </div>
+<!-- 車両販売 -->
+  <section id="hanbai">
+    <h2>車両販売</h2>
+    <p>お客様の予算や希望、ライフスタイルやこれからの使用用途に応じて最適な車両のご提案をします。</p>
+    <p>7人乗りのミニバンをご希望されているお客様でも詳しく使用用途をお聞きすると年に1～2回だけ</p>
+    <p>親戚の集まりで大人数を乗せる機会があるとのこと。大は小を兼ねるとは言うので問題はないですが、</p>
+    <p>大きな車両は購入費用も高く燃費も悪くなるため購入後のランニングコストも高くなります。</p>
+    <p>購入費用とランニングコストを考えると大人数が乗る機会にはレンタカーを借りた方が圧倒的に安く収まる</p>
+    <p>ことが判明して軽自動車をご購入いただき5年間想定コストで約50万円を削減することができました。</p>
+    <p>このようにオーダーされた車両をただ探すだけではなく本当にお客様にあった車両のカウンセリングとご提案を</p>
+    <p>カーライフプランナーとしてご提案します。</p>
   </section>
 
-  <!-- LibeRalとは -->
-  <section id="service">
-    <h2>LibeRalとは</h2>
-    <p>『LibeRal』では、『LibeRal and innovative car dealings』</p>
-    <p>日本語訳で『自由で革新的な自動車の売買』を企業理念に掲げ今までの中古車の売買にはない体験を生み出し</p>
-    <p>豊富な中古車売買の経験からお客様の自動車の売買をサポートするために自動車に関するあらゆるサービスを</p>
-    <p>提供する会社です。</p>
-    <p>自動車の販売・買取はもちろんですが、自動車に関する全てのことに関しましてお客様の問題を解決する</p>
-    <p>サポートを提供します。</p>
-  </section>
-
- 
-
-
-  <!-- フッター -->
+<!-- フッター -->
   <footer>
     <p>&copy; 2025 株式会社LibeRal（リベラル）</p>
   </footer>
-
-  <!-- スライドショー用スクリプト -->
-  <script>
-    const images = ["car1.jpg", "car2.jpg", "car3.jpg", "car4.jpg"]; // 4枚の背景
-    let current = 0;
-    const hero = document.getElementById("hero");
-
-    function changeBackground() {
-      hero.style.backgroundImage = `url(${images[current]})`;
-      current = (current + 1) % images.length;
-    }
-
-    // 最初の画像をセット
-    changeBackground();
-    // 5秒ごとに切り替え
-    setInterval(changeBackground, 5000);
-  </script>
-
-</body>
-</html>
