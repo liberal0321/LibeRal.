@@ -1,213 +1,188 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>会社案内 | 株式会社LibeRal</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>在庫車両 | 株式会社LibeRal</title>
+<style>
+body { font-family: Arial, sans-serif; margin:0; line-height:1.6; }
 
-    /* ロゴ部分（白背景） */
-    .logo-area {
-      background: #fff;
-      padding: 10px 20px;
-    }
-    .logo-area img {
-      height: 60px;
-    }
+/* ロゴ部分 */
+.logo-area { background:#fff; padding:10px 20px; display:flex; align-items:center; }
+.logo-area img { height:60px; }
 
-    /* ナビゲーション全体（黒背景） */
-    nav {
-      background: #333;
-      position: relative;
-    }
+/* ナビ */
+nav { background:#333; position:relative; }
+.hamburger { display:none; font-size:26px; color:#fff; padding:12px 20px; cursor:pointer; }
+.menu { list-style:none; margin:0; padding:0; display:flex; justify-content:center; }
+.menu > li { position:relative; }
+.menu > li > a, .toggle-submenu { display:block; padding:12px 20px; color:#fff; text-decoration:none; cursor:pointer; }
+.menu > li > a:hover, .toggle-submenu:hover { background:#444; }
+.submenu { list-style:none; margin:0; padding:0; position:absolute; top:100%; left:0; background:#444; display:none; min-width:180px; }
+.submenu li a { display:block; padding:10px 15px; color:#fff; text-decoration:none; }
+.submenu li a:hover { background:#555; }
+.dropdown:hover .submenu { display:block; }
 
-    /* ハンバーガー */
-    .hamburger {
-      display: none;
-      font-size: 26px;
-      color: #fff;
-      padding: 12px 20px;
-      cursor: pointer;
-    }
+/* スマホ用 */
+@media (max-width:768px) {
+  .hamburger { display:block; }
+  nav ul.menu { display:none; flex-direction:column; }
+  nav.active ul.menu { display:flex; }
+  .submenu { position:static; background:#555; }
+  .dropdown:hover .submenu { display:none; }
+}
 
-    /* メニュー */
-    .menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-    .menu > li {
-      position: relative;
-    }
-    .menu > li > a,
-    .toggle-submenu {
-      display: block;
-      padding: 12px 20px;
-      color: #fff;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .menu > li > a:hover,
-    .toggle-submenu:hover {
-      background: #444;
-    }
+/* 在庫車両カード */
+.cars {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+  padding:40px 20px;
+  max-width:1000px;
+  margin:auto;
+}
+.car-card {
+  display:flex;
+  flex-direction:column;
+  border:1px solid #ccc;
+  border-radius:5px;
+  overflow:hidden;
+  text-align:center;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  background:#fff;
+  height: 100%; /* 高さを揃える */
+}
+.car-card img {
+  width:100%;
+  height:auto;       /* 高さ自動で比率維持 */
+  object-fit: contain; /* 切れずに全体表示 */
+}
+.car-card .info {
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  flex-grow:1;
+}
+.car-card .info h3 { margin:10px 0; font-size:18px; }
+.car-card .info p { margin:5px 0; font-size:14px; color:#555; }
+.car-card .info a {
+  margin-top:auto;
+  padding:8px 15px;
+  background:#ff6600;
+  color:#fff;
+  text-decoration:none;
+  border-radius:5px;
+  transition:0.3s;
+}
+.car-card .info a:hover { background:#e65c00; }
 
-    /* サブメニュー */
-    .submenu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #444;
-      display: none;
-      min-width: 180px;
-    }
-    .submenu li a {
-      display: block;
-      padding: 10px 15px;
-      color: #fff;
-      text-decoration: none;
-    }
-    .submenu li a:hover {
-      background: #555;
-    }
-
-    /* PCではhoverで表示 */
-    .dropdown:hover .submenu {
-      display: block;
-    }
-
-    /* スマホ用 */
-    @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-      nav ul.menu {
-        display: none;
-        flex-direction: column;
-      }
-      nav.active ul.menu {
-        display: flex;
-      }
-      .submenu {
-        position: static;
-        background: #555;
-      }
-      .dropdown:hover .submenu {
-        display: none; /* hover無効 */
-      }
-    }
-
-    /* コンテンツ部分 */
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      margin-bottom: 20px;
-    }
-
-    /* フッター */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #333;
-      color: #fff;
-      margin-top: 40px;
-    }
-  </style>
+/* フッター */
+footer { text-align:center; padding:20px; background:#333; color:#fff; margin-top:40px; }
+</style>
 </head>
 <body>
 
-  <!-- ヘッダー -->
-  <header>
-    <div class="logo-area">
-      <img src="test.jpg" alt="会社ロゴ" class="logo">
+<header>
+  <div class="logo-area">
+    <img src="test.jpg" alt="会社ロゴ" class="logo">
+  </div>
+  <nav id="nav">
+    <div class="hamburger" id="hamburger">☰</div>
+    <ul class="menu">
+      <li><a href="index.html">ホーム</a></li>
+      <li class="dropdown">
+        <span class="toggle-submenu">オークション代行 ▼</span>
+        <ul class="submenu">
+          <li><a href="service.html">オークション代行とは</a></li>
+          <li><a href="daikouhanbai.html">代行販売</a></li>
+          <li><a href="daikoushuppin.html">代行出品</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <span class="toggle-submenu">車両販売 ▼</span>
+        <ul class="submenu">
+          <li><a href="hanbai.html">販売提案</a></li>
+          <li><a href="zaiko.html">在庫車両</a></li>
+          <li><a href="itaku.html">委託販売</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <span class="toggle-submenu">車両買取 ▼</span>
+        <ul class="submenu">
+          <li><a href="kaitori.html">高価買取の取り組み</a></li>
+          <li><a href="kojin.html">個人売買代行</a></li>
+          <li><a href="satei.html">査定依頼はコチラ</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <span class="toggle-submenu">会社概要 ▼</span>
+        <ul class="submenu">
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="ninka.html">認可・登録番号</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+      <li><a href="privacy.html">プライバシーポリシー</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<section class="cars">
+  <div class="car-card">
+    <img src="zaiko1.jpg" alt="レクサス RX450h">
+    <div class="info">
+      <h3>レクサス RX450h Fスポーツ4WD</h3>
+      <p>車両本体価格(税込み)4,180,000円</p>
+      <p>総額4,280,000円</p>
+      <p>年式: 平成28年 | 走行距離: 103,000km</p>
+      <p>車検: 令和9年7月</p>
+      <a href="contact.html?car=レクサス RX450h">詳細・お問い合わせ</a>
     </div>
+  </div>
 
-    <nav id="nav">
-      <!-- ハンバーガーメニュー -->
-      <div class="hamburger" id="hamburger">☰</div>
+  <div class="car-card">
+    <img src="zaiko2.jpg" alt="スズキ ジムニーシエラ">
+    <div class="info">
+      <h3>スズキ ジムニーシエラ JC 4WD</h3>
+      <p>車両本体価格(税込み)2,780,000円</p>
+      <p>総額2,880,000円</p>
+      <p>年式: 令和4年 | 走行距離: 300km</p>
+      <p>車検: 令和9年3月</p>
+      <a href="contact.html?car=スズキ ジムニーシエラ">詳細・お問い合わせ</a>
+    </div>
+  </div>
+</section>
 
-      <ul class="menu">
-        <li><a href="index.html">ホーム</a></li>
-        <li class="dropdown">
-          <span class="toggle-submenu">オークション代行 ▼</span>
-          <ul class="submenu">
-            <li><a href="service.html">オークション代行とは</a></li>
-            <li><a href="daikouhanbai.html">代行販売</a></li>
-            <li><a href="daikoushuppin.html">代行出品</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <span class="toggle-submenu">車両販売 ▼</span>
-          <ul class="submenu">
-            <li><a href="hanbai.html">販売提案</a></li>
-            <li><a href="zaiko.html">在庫車両</a></li>
-            <li><a href="itaku.html">委託販売</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <span class="toggle-submenu">車両買取 ▼</span>
-          <ul class="submenu">
-            <li><a href="kaitori.html">高価買取の取り組み</a></li>
-            <li><a href="kojin.html">個人売買代行</a></li>
-            <li><a href="satei.html">査定依頼はコチラ</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <span class="toggle-submenu">会社概要 ▼</span>
-          <ul class="submenu">
-        <li><a href="about.html">会社概要</a></li>
-        <li><a href="ninka.html">認可・登録番号</a></li>
-          </ul>
-        </li>
-        <li><a href="contact.html">お問い合わせ</a></li>
-        <li><a href="privacy.html">プライバシーポリシー</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- コンテンツ -->
-  <section id="service">
- <h2>近日公開</h2>
-    <p>COMING SOON....</p>
+<section id="service">
+ <h2>～お問い合わせください～</h2>
+    <p>非掲載在庫やオークションからオーダーで車両を探すことも可能ですので</p>
+    <p>お探しのお車がございましたらお気軽にお問い合わせください。</p>
+ 
   </section>
-  <!-- フッター -->
-  <footer>
-    <p>&copy; 2025 株式会社LibeRal（リベラル）</p>
-  </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // ハンバーガー開閉
-      const hamburger = document.getElementById("hamburger");
-      const nav = document.getElementById("nav");
-      hamburger.addEventListener("click", function () {
-        nav.classList.toggle("active");
-      });
+<footer>
+  <p>&copy; 2025 株式会社LibeRal（リベラル）</p>
+</footer>
 
-      // サブメニュー開閉（スマホ用）
-      document.querySelectorAll(".toggle-submenu").forEach(function (el) {
-        el.addEventListener("click", function () {
-          if (window.innerWidth <= 768) {
-            const submenu = this.nextElementSibling;
-            submenu.style.display =
-              submenu.style.display === "block" ? "none" : "block";
-          }
-        });
-      });
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const nav = document.getElementById("nav");
+  hamburger.addEventListener("click", function () {
+    nav.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".toggle-submenu").forEach(function(el){
+    el.addEventListener("click", function(){
+      if(window.innerWidth <= 768){
+        const submenu = this.nextElementSibling;
+        submenu.style.display = submenu.style.display==="block" ? "none" : "block";
+      }
     });
-  </script>
+  });
+});
+</script>
+
 </body>
 </html>
