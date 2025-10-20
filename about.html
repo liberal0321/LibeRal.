@@ -125,6 +125,27 @@
       color: #fff;
       margin-top: 40px;
     }
+
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9比率 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  margin-top: 20px;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
   </style>
 </head>
 <body>
@@ -179,8 +200,9 @@
   </header>
 
   <!-- コンテンツ -->
+   <!-- コンテンツ -->
   <section id="service">
- <h2>会社情報</h2>
+    <h2>会社情報</h2>
     <p>会社名　　：株式会社LibeRal（リベラル）</p>
     <p>所在地　　：〒273-0134 千葉県鎌ケ谷市西佐津間2-5-31</p>
     <p>設立　　　：2025年3月 </p>
@@ -189,6 +211,20 @@
     <p>連絡先　　：TEL:047-442-0600 </p>
     <p>　　　　　：E-mail:liberal.lr7@gmail.com</p>
   </section>
+
+  <!-- アクセス地図 -->
+  <section id="access">
+    <h2>アクセス</h2>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.093648277368!2d139.9962924745277!3d35.79763422357294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018826ab1fe4f7f%3A0xada8a4568d482493!2z44CSMjczLTAxMzQg5Y2D6JGJ55yM6Y6M44Kx6LC35biC6KW_5L2Q5rSl6ZaT77yS5LiB55uu77yV4oiS77yT77yR!5e0!3m2!1sja!2sjp!4v1760930105134!5m2!1sja!2sjp"
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
 
   <!-- フッター -->
   <footer>
