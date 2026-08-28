@@ -96,10 +96,6 @@
             <span>メーカー</span>
             <select id="makerFilter">
               <option value="">すべて</option>
-              <option value="BMW">BMW</option>
-              <option value="トヨタ">トヨタ</option>
-              <option value="ダイハツ">ダイハツ</option>
-              <option value="スズキ">スズキ</option>
             </select>
           </label>
 
@@ -470,6 +466,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const resultCount = document.getElementById("resultCount");
   const noResults = document.getElementById("noResults");
 
+  // 在庫カードの data-maker からメーカー候補を自動生成
+  function populateMakerOptions() {
+    const cards = Array.from(carsGrid.querySelectorAll(".car-card"));
+    const makers = [...new Set(
+      cards
+        .map(card => card.dataset.maker)
+        .filter(Boolean)
+    )].sort((a, b) => a.localeCompare(b, "ja"));
+
+    makerFilter.innerHTML = '<option value="">すべて</option>';
+
+    makers.forEach(function(maker) {
+      const option = document.createElement("option");
+      option.value = maker;
+      option.textContent = maker;
+      makerFilter.appendChild(option);
+    });
+  }
+
   function filterCars() {
     const maker = makerFilter.value;
     const year = Number(yearFilter.value || 0);
@@ -527,6 +542,9 @@ document.addEventListener("DOMContentLoaded", function () {
   keywordFilter.addEventListener("keydown", function(e) {
     if (e.key === "Enter") filterCars();
   });
+
+// メーカー候補を在庫データから自動生成
+populateMakerOptions();
 
 // 初回表示時に在庫台数を自動計算
 filterCars();
