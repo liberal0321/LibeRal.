@@ -3,144 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>会社案内 | 株式会社LibeRal</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-    }
+  <meta name="description" content="株式会社LibeRalの車両買取。オンライン査定と低コストな運営により、高価買取と多様な売却方法をご提案します。">
+  <title>車両買取 | 株式会社LibeRal</title>
 
-    /* ロゴ部分（白背景） */
-    .logo-area {
-      background: #fff;
-      padding: 10px 20px;
-    }
-    .logo-area img {
-      height: 60px;
-    }
-
-    /* ナビゲーション全体（黒背景） */
-    nav {
-      background: #333;
-      position: relative;
-    }
-
-    /* ハンバーガー */
-    .hamburger {
-      display: none;
-      font-size: 26px;
-      color: #fff;
-      padding: 12px 20px;
-      cursor: pointer;
-    }
-
-    /* メニュー */
-    .menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-    .menu > li {
-      position: relative;
-    }
-    .menu > li > a,
-    .toggle-submenu {
-      display: block;
-      padding: 12px 20px;
-      color: #fff;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .menu > li > a:hover,
-    .toggle-submenu:hover {
-      background: #444;
-    }
-
-    /* サブメニュー */
-    .submenu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #444;
-      display: none;
-      min-width: 180px;
-    }
-    .submenu li a {
-      display: block;
-      padding: 10px 15px;
-      color: #fff;
-      text-decoration: none;
-    }
-    .submenu li a:hover {
-      background: #555;
-    }
-
-    /* PCではhoverで表示 */
-    .dropdown:hover .submenu {
-      display: block;
-    }
-
-    /* スマホ用 */
-    @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-      nav ul.menu {
-        display: none;
-        flex-direction: column;
-      }
-      nav.active ul.menu {
-        display: flex;
-      }
-      .submenu {
-        position: static;
-        background: #555;
-      }
-      .dropdown:hover .submenu {
-        display: none; /* hover無効 */
-      }
-    }
-
-    /* コンテンツ部分 */
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      margin-bottom: 20px;
-    }
-
-    /* フッター */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #333;
-      color: #fff;
-      margin-top: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="kaitori.css">
 </head>
 <body>
 
-  <!-- ヘッダー -->
-  <header>
+<header class="site-header">
+  <div class="header-inner">
     <div class="logo-area">
-      <img src="test.jpg" alt="会社ロゴ" class="logo">
+      <a href="index.html" aria-label="株式会社LibeRal ホーム">
+        <img src="test.png" alt="株式会社LibeRal" class="logo">
+      </a>
     </div>
 
     <nav id="nav">
-      <!-- ハンバーガーメニュー -->
-      <div class="hamburger" id="hamburger">☰</div>
+      <button class="hamburger" id="hamburger" type="button" aria-label="メニューを開く">☰</button>
 
       <ul class="menu">
         <li><a href="index.html">ホーム</a></li>
+
         <li class="dropdown">
           <span class="toggle-submenu">オークション代行 ▼</span>
           <ul class="submenu">
@@ -149,6 +33,7 @@
             <li><a href="daikoushuppin.html">代行出品</a></li>
           </ul>
         </li>
+
         <li class="dropdown">
           <span class="toggle-submenu">車両販売 ▼</span>
           <ul class="submenu">
@@ -157,62 +42,214 @@
             <li><a href="itaku.html">委託販売</a></li>
           </ul>
         </li>
+
         <li class="dropdown">
-          <span class="toggle-submenu">車両買取 ▼</span>
+          <span class="toggle-submenu active-menu">車両買取 ▼</span>
           <ul class="submenu">
             <li><a href="kaitori.html">高価買取の取り組み</a></li>
             <li><a href="kojin.html">個人売買代行</a></li>
             <li><a href="satei.html">査定依頼はコチラ</a></li>
           </ul>
         </li>
+
         <li class="dropdown">
           <span class="toggle-submenu">会社概要 ▼</span>
           <ul class="submenu">
-        <li><a href="about.html">会社概要</a></li>
-        <li><a href="ninka.html">認可・登録番号</a></li>
+            <li><a href="about.html">会社概要</a></li>
+            <li><a href="ninka.html">認可・登録番号</a></li>
           </ul>
         </li>
+
         <li><a href="contact.html">お問い合わせ</a></li>
         <li><a href="privacy.html">プライバシーポリシー</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <!-- コンテンツ -->
-  <section id="service">
- <h2>車両買取</h2>
-    <p>実査定なしでのオンライン査定が可能です。電話やメールLINEなどを活用して車両の査定を行います。</p>
-    <p>従来型の出張査定に行くスタイルではなくオンライン査定にすることにより出張査定に行く交通費や</p>
-    <p>人件費などのコストカットに加え無店舗型のため大手買取店よりも経費が少ないため高価買取が可能です。</p>
-    <p>買取という従来の売却方法だけでなくオークションの代行出品や個人売買の仲介など様々な売却方法で</p>
-    <p>お車を高額にそしてスムーズにお手放しするサポートが可能です。</p>
+<section class="purchase-hero">
+  <div class="purchase-hero-bg"></div>
+  <div class="purchase-hero-overlay"></div>
+
+  <div class="purchase-hero-content">
+    <span class="page-kicker">CAR PURCHASE</span>
+    <h1>車両買取</h1>
+    <p>売却方法をひとつに決めない。<br>あなたのクルマに、最適な出口を。</p>
+  </div>
+</section>
+
+<main>
+  <section class="purchase-section">
+
+    <div class="purchase-intro reveal">
+      <div class="section-heading">
+        <span class="section-en">ONLINE APPRAISAL</span>
+<h2>
+  <span>実査定なしでも、</span>
+  <span>クルマは査定できる。</span>
+</h2>
+      </div>
+
+      <div class="intro-copy">
+        <p>
+          LibeRalでは、実査定なしでのオンライン査定が可能です。
+          電話・メール・LINEなどを活用し、車両情報を確認しながら査定を行います。
+        </p>
+        <p>
+          従来型の出張査定にかかる交通費や人件費を削減。
+          さらに無店舗型で運営コストを抑えることで、その分を買取価格へ還元します。
+        </p>
+      </div>
+    </div>
+
+    <div class="strength-section reveal">
+      <div class="section-heading compact">
+        <span class="section-en">WHY LIBERAL</span>
+        <h2>高価買取を実現する仕組み</h2>
+      </div>
+
+      <div class="strength-grid">
+        <article class="strength-card">
+          <span class="strength-number">01</span>
+          <div class="strength-icon">ONLINE</div>
+          <h3>オンライン査定</h3>
+          <p>電話・メール・LINEなどを活用し、実査定に出向くコストを抑えます。</p>
+        </article>
+
+        <article class="strength-card">
+          <span class="strength-number">02</span>
+          <div class="strength-icon">LOW COST</div>
+          <h3>無店舗型の運営</h3>
+          <p>大型店舗や展示場を持つ従来型の買取店より、固定費を抑えた運営を行います。</p>
+        </article>
+
+        <article class="strength-card">
+          <span class="strength-number">03</span>
+          <div class="strength-icon">RETURN</div>
+          <h3>コストを価格へ還元</h3>
+          <p>削減した交通費・人件費・店舗経費を、できる限り買取価格へ還元します。</p>
+        </article>
+      </div>
+    </div>
+
+    <section class="route-section reveal">
+      <div class="route-heading">
+        <span class="section-en">SELLING OPTIONS</span>
+        <h2>「買取」だけが、<br>売却ではありません。</h2>
+        <p>
+          車種・相場・ご希望に合わせて、複数の売却方法から
+          より高く、よりスムーズに手放せる方法をご提案します。
+        </p>
+      </div>
+
+      <div class="route-grid">
+        <a href="satei.html" class="route-card">
+          <span class="route-no">01</span>
+          <span class="route-en">PURCHASE</span>
+          <h3>車両買取</h3>
+          <p>スピーディーに売却したい方へ。オンライン査定から買取までサポートします。</p>
+          <span class="route-arrow">→</span>
+        </a>
+
+        <a href="daikoushuppin.html" class="route-card">
+          <span class="route-no">02</span>
+          <span class="route-en">AUCTION</span>
+          <h3>オークション代行出品</h3>
+          <p>業者間オークションを活用し、市場での売却価格を狙う選択肢です。</p>
+          <span class="route-arrow">→</span>
+        </a>
+
+        <a href="kojin.html" class="route-card">
+          <span class="route-no">03</span>
+          <span class="route-en">OWNER TO OWNER</span>
+          <h3>個人売買の仲介</h3>
+          <p>今のオーナーから次のオーナーへ。直接売買に近い形でつなぎます。</p>
+          <span class="route-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="purchase-message reveal">
+      <div class="message-copy">
+        <span class="message-kicker">BEST EXIT FOR YOUR CAR</span>
+        <h2>クルマの価値を、<br>最大限に。</h2>
+        <p>
+          「どこに売るか」ではなく、<br>
+          「どう売るのが最も良いか」から考える。
+        </p>
+      </div>
+
+      <div class="message-line" aria-hidden="true">
+        <span>CAR</span>
+        <i></i>
+        <strong>LibeRal</strong>
+        <i></i>
+        <span>NEXT</span>
+      </div>
+    </section>
+
+    <section class="purchase-cta reveal">
+      <div>
+        <span class="cta-kicker">FREE APPRAISAL</span>
+        <h3>まずは、愛車の価値を知るところから。</h3>
+        <p>オンラインで査定依頼が可能です。お気軽にご相談ください。</p>
+      </div>
+      <a href="satei.html" class="cta-button">査定を依頼する <span>→</span></a>
+    </section>
+
   </section>
+</main>
 
-  <!-- フッター -->
-  <footer>
-    <p>&copy; 2025 株式会社LibeRal（リベラル）</p>
-  </footer>
+<footer class="purchase-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">LibeRal</div>
+      <p>LibeRal and innovative car dealings</p>
+    </div>
+    <p>&copy; 2025-2026 株式会社LibeRal（リベラル）</p>
+  </div>
+</footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // ハンバーガー開閉
-      const hamburger = document.getElementById("hamburger");
-      const nav = document.getElementById("nav");
-      hamburger.addEventListener("click", function () {
-        nav.classList.toggle("active");
-      });
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const nav = document.getElementById("nav");
+  const header = document.querySelector(".site-header");
 
-      // サブメニュー開閉（スマホ用）
-      document.querySelectorAll(".toggle-submenu").forEach(function (el) {
-        el.addEventListener("click", function () {
-          if (window.innerWidth <= 768) {
-            const submenu = this.nextElementSibling;
-            submenu.style.display =
-              submenu.style.display === "block" ? "none" : "block";
-          }
-        });
-      });
+  hamburger.addEventListener("click", function () {
+    nav.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".toggle-submenu").forEach(function (el) {
+    el.addEventListener("click", function () {
+      if (window.innerWidth <= 980) {
+        const submenu = this.nextElementSibling;
+        submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+      }
     });
-  </script>
+  });
+
+  function updateHeader() {
+    header.classList.toggle("scrolled", window.scrollY > 40);
+  }
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.10 });
+
+  document.querySelectorAll(".reveal").forEach(function(el) {
+    observer.observe(el);
+  });
+});
+</script>
+
 </body>
 </html>

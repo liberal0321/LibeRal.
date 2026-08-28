@@ -3,144 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>会社案内 | 株式会社LibeRal</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-    }
+  <title>車両販売 | 株式会社LibeRal</title>
 
-    /* ロゴ部分（白背景） */
-    .logo-area {
-      background: #fff;
-      padding: 10px 20px;
-    }
-    .logo-area img {
-      height: 60px;
-    }
-
-    /* ナビゲーション全体（黒背景） */
-    nav {
-      background: #333;
-      position: relative;
-    }
-
-    /* ハンバーガー */
-    .hamburger {
-      display: none;
-      font-size: 26px;
-      color: #fff;
-      padding: 12px 20px;
-      cursor: pointer;
-    }
-
-    /* メニュー */
-    .menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-    .menu > li {
-      position: relative;
-    }
-    .menu > li > a,
-    .toggle-submenu {
-      display: block;
-      padding: 12px 20px;
-      color: #fff;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .menu > li > a:hover,
-    .toggle-submenu:hover {
-      background: #444;
-    }
-
-    /* サブメニュー */
-    .submenu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #444;
-      display: none;
-      min-width: 180px;
-    }
-    .submenu li a {
-      display: block;
-      padding: 10px 15px;
-      color: #fff;
-      text-decoration: none;
-    }
-    .submenu li a:hover {
-      background: #555;
-    }
-
-    /* PCではhoverで表示 */
-    .dropdown:hover .submenu {
-      display: block;
-    }
-
-    /* スマホ用 */
-    @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-      nav ul.menu {
-        display: none;
-        flex-direction: column;
-      }
-      nav.active ul.menu {
-        display: flex;
-      }
-      .submenu {
-        position: static;
-        background: #555;
-      }
-      .dropdown:hover .submenu {
-        display: none; /* hover無効 */
-      }
-    }
-
-    /* コンテンツ部分 */
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      margin-bottom: 20px;
-    }
-
-    /* フッター */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #333;
-      color: #fff;
-      margin-top: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="hanbai.css">
 </head>
 <body>
 
-  <!-- ヘッダー -->
-  <header>
+<header class="site-header">
+  <div class="header-inner">
     <div class="logo-area">
-      <img src="test.jpg" alt="会社ロゴ" class="logo">
+      <a href="index.html" aria-label="株式会社LibeRal ホーム">
+        <img src="test.png" alt="株式会社LibeRal">
+      </a>
     </div>
 
     <nav id="nav">
-      <!-- ハンバーガーメニュー -->
-      <div class="hamburger" id="hamburger">☰</div>
+      <button class="hamburger" id="hamburger" type="button" aria-label="メニューを開く">☰</button>
 
       <ul class="menu">
         <li><a href="index.html">ホーム</a></li>
+
         <li class="dropdown">
           <span class="toggle-submenu">オークション代行 ▼</span>
           <ul class="submenu">
@@ -149,14 +32,16 @@
             <li><a href="daikoushuppin.html">代行出品</a></li>
           </ul>
         </li>
+
         <li class="dropdown">
-          <span class="toggle-submenu">車両販売 ▼</span>
+          <span class="toggle-submenu active-menu">車両販売 ▼</span>
           <ul class="submenu">
             <li><a href="hanbai.html">販売提案</a></li>
             <li><a href="zaiko.html">在庫車両</a></li>
             <li><a href="itaku.html">委託販売</a></li>
           </ul>
         </li>
+
         <li class="dropdown">
           <span class="toggle-submenu">車両買取 ▼</span>
           <ul class="submenu">
@@ -165,56 +50,191 @@
             <li><a href="satei.html">査定依頼はコチラ</a></li>
           </ul>
         </li>
+
         <li class="dropdown">
           <span class="toggle-submenu">会社概要 ▼</span>
           <ul class="submenu">
-        <li><a href="about.html">会社概要</a></li>
-        <li><a href="ninka.html">認可・登録番号</a></li>
+            <li><a href="about.html">会社概要</a></li>
+            <li><a href="ninka.html">認可・登録番号</a></li>
           </ul>
         </li>
+
         <li><a href="contact.html">お問い合わせ</a></li>
         <li><a href="privacy.html">プライバシーポリシー</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <!-- コンテンツ -->
-  <section id="service">
- <h2>車両販売</h2>
-    <p>お客様の予算や希望、ライフスタイルやこれからの使用用途に応じて最適な車両のご提案をします。</p>
-    <p>7人乗りのミニバンをご希望されているお客様でも詳しく使用用途をお聞きすると年に1～2回だけ</p>
-    <p>親戚の集まりで大人数を乗せる機会があるとのこと。大は小を兼ねるとは言うので問題はないですが、</p>
-    <p>大きな車両は購入費用も高く燃費も悪くなるため購入後のランニングコストも高くなります。</p>
-    <p>購入費用とランニングコストを考えると大人数が乗る機会にはレンタカーを借りた方が圧倒的に安く収まる</p>
-    <p>ことが判明して軽自動車をご購入いただき5年間想定コストで約50万円を削減することができました。</p>
-    <p>このようにオーダーされた車両をただ探すだけではなく本当にお客様にあった車両のカウンセリングとご提案を</p>
-    <p>カーライフプランナーとしてご提案します。</p>
+<section class="sales-hero">
+  <div class="sales-hero-bg"></div>
+  <div class="sales-hero-overlay"></div>
+
+  <div class="sales-hero-content">
+    <span class="page-kicker">CAR SALES</span>
+    <h1>車両販売</h1>
+    <p>欲しい車ではなく、本当に合う車をご提案します。</p>
+  </div>
+</section>
+
+<main>
+  <section class="sales-section reveal">
+
+    <div class="section-heading">
+      <span class="section-en">CAR LIFE PLANNING</span>
+      <h2>販売提案について</h2>
+      <p>予算・ライフスタイル・使用用途まで含めて、最適な一台をご提案します。</p>
+    </div>
+
+    <div class="concept-grid">
+      <div class="concept-main">
+        <span class="concept-label">OUR PHILOSOPHY</span>
+        <h3>「希望車種を探す」だけではありません。</h3>
+        <p>
+          お客様の予算や希望、ライフスタイル、これからの使用用途に応じて
+          最適な車両をご提案します。
+        </p>
+        <p>
+          購入費用だけでなく、その後にかかる燃料代・税金・保険・維持費まで含め、
+          カーライフ全体で合理的な選択を一緒に考えます。
+        </p>
+      </div>
+
+      <div class="concept-side">
+        <span class="big-number">01</span>
+        <h4>目的から逆算する</h4>
+        <p>「何に乗りたいか」だけでなく、「どう使うか」から車選びを考えます。</p>
+      </div>
+    </div>
+
+    <div class="case-section">
+      <div class="section-heading compact">
+        <span class="section-en">CASE STUDY</span>
+        <h2>ご提案例</h2>
+      </div>
+
+      <div class="case-card">
+        <div class="case-before">
+          <span class="case-kicker">BEFORE</span>
+          <h3>7人乗りミニバンをご希望</h3>
+          <p>
+            詳しくお話を伺うと、大人数で乗る機会は年に1〜2回の親戚の集まりのみでした。
+          </p>
+        </div>
+
+        <div class="case-arrow">→</div>
+
+        <div class="case-after">
+          <span class="case-kicker">AFTER</span>
+          <h3>軽自動車＋必要時レンタカー</h3>
+          <p>
+            日常利用に合わせて軽自動車をご購入いただき、大人数時のみレンタカーを利用するプランをご提案しました。
+          </p>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <span class="result-label">5年間想定コスト</span>
+        <strong>約50万円削減</strong>
+        <p>購入価格とランニングコストを含めたトータルコストで比較した結果です。</p>
+      </div>
+    </div>
+
+    <div class="points-grid">
+      <div class="point-card">
+        <span>01</span>
+        <h3>予算</h3>
+        <p>車両本体価格だけでなく、購入後の維持費まで考慮します。</p>
+      </div>
+
+      <div class="point-card">
+        <span>02</span>
+        <h3>使用用途</h3>
+        <p>通勤・送迎・レジャー・長距離など、実際の使い方を整理します。</p>
+      </div>
+
+      <div class="point-card">
+        <span>03</span>
+        <h3>ライフスタイル</h3>
+        <p>家族構成や今後の生活変化も踏まえて車種をご提案します。</p>
+      </div>
+
+      <div class="point-card">
+        <span>04</span>
+        <h3>総保有コスト</h3>
+        <p>燃費・税金・保険・車検・下取り価値まで含めて比較します。</p>
+      </div>
+    </div>
+
+    <div class="planner-message">
+      <span class="section-en">CAR LIFE PLANNER</span>
+      <h2>カーライフプランナーとして。</h2>
+      <p>
+        オーダーされた車両をただ探すだけではなく、
+        本当にお客様に合った車両をカウンセリングし、ご提案します。
+      </p>
+    </div>
+
+    <div class="sales-cta">
+      <div>
+        <span class="cta-kicker">CONTACT</span>
+        <h3>車種が決まっていなくても大丈夫です。</h3>
+        <p>ご予算や使い方から、一緒に最適な一台を考えます。</p>
+      </div>
+
+      <a href="contact.html" class="sales-button">相談する <span>→</span></a>
+    </div>
+
   </section>
-  <!-- フッター -->
-  <footer>
-    <p>&copy; 2025 株式会社LibeRal（リベラル）</p>
-  </footer>
+</main>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // ハンバーガー開閉
-      const hamburger = document.getElementById("hamburger");
-      const nav = document.getElementById("nav");
-      hamburger.addEventListener("click", function () {
-        nav.classList.toggle("active");
-      });
+<footer class="sales-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">LibeRal</div>
+      <p>LibeRal and innovative car dealings</p>
+    </div>
+    <p>&copy; 2025-2026 株式会社LibeRal（リベラル）</p>
+  </div>
+</footer>
 
-      // サブメニュー開閉（スマホ用）
-      document.querySelectorAll(".toggle-submenu").forEach(function (el) {
-        el.addEventListener("click", function () {
-          if (window.innerWidth <= 768) {
-            const submenu = this.nextElementSibling;
-            submenu.style.display =
-              submenu.style.display === "block" ? "none" : "block";
-          }
-        });
-      });
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const nav = document.getElementById("nav");
+  const header = document.querySelector(".site-header");
+
+  hamburger.addEventListener("click", function () {
+    nav.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".toggle-submenu").forEach(function (el) {
+    el.addEventListener("click", function () {
+      if (window.innerWidth <= 980) {
+        const submenu = this.nextElementSibling;
+        submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+      }
     });
-  </script>
+  });
+
+  function updateHeader() {
+    header.classList.toggle("scrolled", window.scrollY > 40);
+  }
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) entry.target.classList.add("show");
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll(".reveal").forEach(function(el) {
+    observer.observe(el);
+  });
+});
+</script>
+
 </body>
 </html>

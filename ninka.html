@@ -3,144 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>会社案内 | 株式会社LibeRal</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-    }
+  <meta name="description" content="株式会社LibeRalの認可・登録番号をご案内します。">
+  <title>認可・登録番号 | 株式会社LibeRal</title>
 
-    /* ロゴ部分（白背景） */
-    .logo-area {
-      background: #fff;
-      padding: 10px 20px;
-    }
-    .logo-area img {
-      height: 60px;
-    }
-
-    /* ナビゲーション全体（黒背景） */
-    nav {
-      background: #333;
-      position: relative;
-    }
-
-    /* ハンバーガー */
-    .hamburger {
-      display: none;
-      font-size: 26px;
-      color: #fff;
-      padding: 12px 20px;
-      cursor: pointer;
-    }
-
-    /* メニュー */
-    .menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-    .menu > li {
-      position: relative;
-    }
-    .menu > li > a,
-    .toggle-submenu {
-      display: block;
-      padding: 12px 20px;
-      color: #fff;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .menu > li > a:hover,
-    .toggle-submenu:hover {
-      background: #444;
-    }
-
-    /* サブメニュー */
-    .submenu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #444;
-      display: none;
-      min-width: 180px;
-    }
-    .submenu li a {
-      display: block;
-      padding: 10px 15px;
-      color: #fff;
-      text-decoration: none;
-    }
-    .submenu li a:hover {
-      background: #555;
-    }
-
-    /* PCではhoverで表示 */
-    .dropdown:hover .submenu {
-      display: block;
-    }
-
-    /* スマホ用 */
-    @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-      nav ul.menu {
-        display: none;
-        flex-direction: column;
-      }
-      nav.active ul.menu {
-        display: flex;
-      }
-      .submenu {
-        position: static;
-        background: #555;
-      }
-      .dropdown:hover .submenu {
-        display: none; /* hover無効 */
-      }
-    }
-
-    /* コンテンツ部分 */
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      margin-bottom: 20px;
-    }
-
-    /* フッター */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #333;
-      color: #fff;
-      margin-top: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ninka.css">
 </head>
 <body>
 
-  <!-- ヘッダー -->
-  <header>
+<header class="site-header">
+  <div class="header-inner">
     <div class="logo-area">
-      <img src="test.jpg" alt="会社ロゴ" class="logo">
+      <a href="index.html" aria-label="株式会社LibeRal ホーム">
+        <img src="test.png" alt="株式会社LibeRal" class="logo">
+      </a>
     </div>
 
     <nav id="nav">
-      <!-- ハンバーガーメニュー -->
-      <div class="hamburger" id="hamburger">☰</div>
+      <button class="hamburger" id="hamburger" type="button" aria-label="メニューを開く">☰</button>
 
       <ul class="menu">
         <li><a href="index.html">ホーム</a></li>
+
         <li class="dropdown">
           <span class="toggle-submenu">オークション代行 ▼</span>
           <ul class="submenu">
@@ -149,6 +33,7 @@
             <li><a href="daikoushuppin.html">代行出品</a></li>
           </ul>
         </li>
+
         <li class="dropdown">
           <span class="toggle-submenu">車両販売 ▼</span>
           <ul class="submenu">
@@ -157,6 +42,7 @@
             <li><a href="itaku.html">委託販売</a></li>
           </ul>
         </li>
+
         <li class="dropdown">
           <span class="toggle-submenu">車両買取 ▼</span>
           <ul class="submenu">
@@ -165,53 +51,153 @@
             <li><a href="satei.html">査定依頼はコチラ</a></li>
           </ul>
         </li>
+
         <li class="dropdown">
-          <span class="toggle-submenu">会社概要 ▼</span>
+          <span class="toggle-submenu active-menu">会社概要 ▼</span>
           <ul class="submenu">
-        <li><a href="about.html">会社概要</a></li>
-        <li><a href="ninka.html">認可・登録番号</a></li>
+            <li><a href="about.html">会社概要</a></li>
+            <li><a href="ninka.html">認可・登録番号</a></li>
           </ul>
         </li>
+
         <li><a href="contact.html">お問い合わせ</a></li>
         <li><a href="privacy.html">プライバシーポリシー</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <!-- コンテンツ -->
-  <section id="service">
-    <h2>認可・登録番号</h2>
-    <p>古物商許可番号：千葉県公安委員会</p>
-    <p>　　　　　　　　第441410000925号</p>
-    <p>インボイス番号：T6040001138012
-</p>
+<section class="license-hero">
+  <div class="license-hero-bg"></div>
+  <div class="license-hero-overlay"></div>
+
+  <div class="license-hero-content">
+    <span class="page-kicker">LICENSE & REGISTRATION</span>
+    <h1>認可・登録番号</h1>
+    <p>法令に基づく許認可・登録情報をご案内します。</p>
+  </div>
+</section>
+
+<main>
+  <section class="license-section">
+
+    <div class="license-intro reveal">
+      <div class="section-heading">
+        <span class="section-en">COMPANY LICENSE</span>
+        <h2>認可・登録情報</h2>
+      </div>
+
+      <div class="intro-copy">
+        <p>
+          株式会社LibeRalでは、中古車売買に必要な各種認可・登録のもと、
+          適正な事業運営を行っています。
+        </p>
+      </div>
+    </div>
+
+    <div class="license-grid reveal">
+      <article class="license-card">
+        <span class="license-no">01</span>
+        <span class="license-label">SECONDHAND DEALER LICENSE</span>
+        <h3>古物商許可番号</h3>
+
+        <div class="license-value">
+          <span>千葉県公安委員会</span>
+          <strong>第441410000925号</strong>
+        </div>
+      </article>
+
+      <article class="license-card">
+        <span class="license-no">02</span>
+        <span class="license-label">INVOICE REGISTRATION</span>
+        <h3>インボイス登録番号</h3>
+
+        <div class="license-value">
+          <strong>T6040001138012</strong>
+        </div>
+      </article>
+    </div>
+
+    <section class="trust-section reveal">
+      <div class="trust-copy">
+        <span class="section-en">TRUST & COMPLIANCE</span>
+        <h2>安心してお取引いただくために。</h2>
+        <p>
+          許認可・登録情報を明示し、透明性のある事業運営を大切にしています。
+          お車の売却・購入・各種代行サービスについて、安心してご相談ください。
+        </p>
+      </div>
+
+      <div class="trust-mark" aria-hidden="true">
+        <span>AUTHORIZED</span>
+        <strong>LibeRal</strong>
+        <small>CHIBA / JAPAN</small>
+      </div>
+    </section>
+
+    <section class="license-cta reveal">
+      <div>
+        <span class="cta-kicker">CONTACT</span>
+        <h3>サービスについてのご質問はこちら。</h3>
+        <p>車両売買や各種代行サービスについて、お気軽にお問い合わせください。</p>
+      </div>
+      <a href="contact.html" class="cta-button">お問い合わせ <span>→</span></a>
+    </section>
+
   </section>
+</main>
 
-  <!-- フッター -->
-  <footer>
-    <p>&copy; 2025 株式会社LibeRal（リベラル）</p>
-  </footer>
+<footer class="license-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">LibeRal</div>
+      <p>LibeRal and innovative car dealings</p>
+    </div>
+    <p>&copy; 2025-2026 株式会社LibeRal（リベラル）</p>
+  </div>
+</footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // ハンバーガー開閉
-      const hamburger = document.getElementById("hamburger");
-      const nav = document.getElementById("nav");
-      hamburger.addEventListener("click", function () {
-        nav.classList.toggle("active");
-      });
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const nav = document.getElementById("nav");
+  const header = document.querySelector(".site-header");
 
-      // サブメニュー開閉（スマホ用）
-      document.querySelectorAll(".toggle-submenu").forEach(function (el) {
-        el.addEventListener("click", function () {
-          if (window.innerWidth <= 768) {
-            const submenu = this.nextElementSibling;
-            submenu.style.display =
-              submenu.style.display === "block" ? "none" : "block";
-          }
-        });
-      });
+  hamburger.addEventListener("click", function () {
+    nav.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".toggle-submenu").forEach(function (el) {
+    el.addEventListener("click", function () {
+      if (window.innerWidth <= 980) {
+        const submenu = this.nextElementSibling;
+        submenu.style.display =
+          submenu.style.display === "block" ? "none" : "block";
+      }
     });
-  </script>
+  });
+
+  function updateHeader() {
+    header.classList.toggle("scrolled", window.scrollY > 40);
+  }
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.10 });
+
+  document.querySelectorAll(".reveal").forEach(function(el) {
+    observer.observe(el);
+  });
+});
+</script>
+
 </body>
 </html>

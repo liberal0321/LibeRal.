@@ -3,144 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>会社案内 | 株式会社LibeRal</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-    }
+  <meta name="description" content="株式会社LibeRalの個人売買代行。名義変更、金銭取引、分割支払いなど個人売買の不安を幅広くサポートします。">
+  <title>個人売買代行 | 株式会社LibeRal</title>
 
-    /* ロゴ部分（白背景） */
-    .logo-area {
-      background: #fff;
-      padding: 10px 20px;
-    }
-    .logo-area img {
-      height: 60px;
-    }
-
-    /* ナビゲーション全体（黒背景） */
-    nav {
-      background: #333;
-      position: relative;
-    }
-
-    /* ハンバーガー */
-    .hamburger {
-      display: none;
-      font-size: 26px;
-      color: #fff;
-      padding: 12px 20px;
-      cursor: pointer;
-    }
-
-    /* メニュー */
-    .menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-    .menu > li {
-      position: relative;
-    }
-    .menu > li > a,
-    .toggle-submenu {
-      display: block;
-      padding: 12px 20px;
-      color: #fff;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .menu > li > a:hover,
-    .toggle-submenu:hover {
-      background: #444;
-    }
-
-    /* サブメニュー */
-    .submenu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #444;
-      display: none;
-      min-width: 180px;
-    }
-    .submenu li a {
-      display: block;
-      padding: 10px 15px;
-      color: #fff;
-      text-decoration: none;
-    }
-    .submenu li a:hover {
-      background: #555;
-    }
-
-    /* PCではhoverで表示 */
-    .dropdown:hover .submenu {
-      display: block;
-    }
-
-    /* スマホ用 */
-    @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-      nav ul.menu {
-        display: none;
-        flex-direction: column;
-      }
-      nav.active ul.menu {
-        display: flex;
-      }
-      .submenu {
-        position: static;
-        background: #555;
-      }
-      .dropdown:hover .submenu {
-        display: none; /* hover無効 */
-      }
-    }
-
-    /* コンテンツ部分 */
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      margin-bottom: 20px;
-    }
-
-    /* フッター */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #333;
-      color: #fff;
-      margin-top: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="kojin.css">
 </head>
 <body>
 
-  <!-- ヘッダー -->
-  <header>
+<header class="site-header">
+  <div class="header-inner">
     <div class="logo-area">
-      <img src="test.jpg" alt="会社ロゴ" class="logo">
+      <a href="index.html" aria-label="株式会社LibeRal ホーム">
+        <img src="test.png" alt="株式会社LibeRal" class="logo">
+      </a>
     </div>
 
     <nav id="nav">
-      <!-- ハンバーガーメニュー -->
-      <div class="hamburger" id="hamburger">☰</div>
+      <button class="hamburger" id="hamburger" type="button" aria-label="メニューを開く">☰</button>
 
       <ul class="menu">
         <li><a href="index.html">ホーム</a></li>
+
         <li class="dropdown">
           <span class="toggle-submenu">オークション代行 ▼</span>
           <ul class="submenu">
@@ -149,6 +33,7 @@
             <li><a href="daikoushuppin.html">代行出品</a></li>
           </ul>
         </li>
+
         <li class="dropdown">
           <span class="toggle-submenu">車両販売 ▼</span>
           <ul class="submenu">
@@ -157,62 +42,199 @@
             <li><a href="itaku.html">委託販売</a></li>
           </ul>
         </li>
+
         <li class="dropdown">
-          <span class="toggle-submenu">車両買取 ▼</span>
+          <span class="toggle-submenu active-menu">車両買取 ▼</span>
           <ul class="submenu">
             <li><a href="kaitori.html">高価買取の取り組み</a></li>
             <li><a href="kojin.html">個人売買代行</a></li>
             <li><a href="satei.html">査定依頼はコチラ</a></li>
           </ul>
         </li>
+
         <li class="dropdown">
           <span class="toggle-submenu">会社概要 ▼</span>
           <ul class="submenu">
-        <li><a href="about.html">会社概要</a></li>
-        <li><a href="ninka.html">認可・登録番号</a></li>
+            <li><a href="about.html">会社概要</a></li>
+            <li><a href="ninka.html">認可・登録番号</a></li>
           </ul>
         </li>
+
         <li><a href="contact.html">お問い合わせ</a></li>
         <li><a href="privacy.html">プライバシーポリシー</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <!-- コンテンツ -->
-  <section id="service">
- <h2>個人売買代行</h2>
-    <p>個人売買での様々な問題やトラブルをサポートします。</p>
-    <p>名義変更きちんとされるか不安。金銭のやり取りでトラブルになりたくない。そんな悩みはございませんか？</p>
-    <p>LibeRalでは名義変更から金銭取引の仲介さらには分割支払いのサポートまで幅広く個人売買をサポートします。</p>
-    <p>個人売買でお悩みの際はお気軽にお問い合わせください。</p>
-    
+<section class="kojin-hero">
+  <div class="kojin-hero-bg"></div>
+  <div class="kojin-hero-overlay"></div>
+  <div class="kojin-hero-content">
+    <span class="page-kicker">OWNER TO OWNER</span>
+    <h1>個人売買代行</h1>
+    <p>個人売買を、もっと安心に。<br>売る人と買う人をLibeRalがつなぎます。</p>
+  </div>
+</section>
+
+<main>
+  <section class="kojin-section">
+
+    <div class="kojin-intro reveal">
+      <div class="section-heading">
+        <span class="section-en">PERSONAL TRANSACTION SUPPORT</span>
+        <h2><span>個人売買の不安を、</span><span>安心に変える。</span></h2>
+      </div>
+
+      <div class="intro-copy">
+        <p>個人売買での様々な問題やトラブルをサポートします。</p>
+        <p>「名義変更がきちんとされるか不安」「金銭のやり取りでトラブルになりたくない」そんな悩みはございませんか？</p>
+        <p>LibeRalでは、名義変更から金銭取引の仲介、さらには分割支払いのサポートまで、幅広く個人売買をサポートします。</p>
+      </div>
+    </div>
+
+    <section class="worry-section reveal">
+      <div class="section-heading compact">
+        <span class="section-en">COMMON CONCERNS</span>
+        <h2>こんな不安、ありませんか？</h2>
+      </div>
+
+      <div class="worry-grid">
+        <article class="worry-card">
+          <span class="worry-no">01</span>
+          <h3>名義変更</h3>
+          <p>車を渡したあと、本当に名義変更してもらえるのか不安。</p>
+        </article>
+
+        <article class="worry-card">
+          <span class="worry-no">02</span>
+          <h3>金銭のやり取り</h3>
+          <p>車両代金の受け渡しで、未払いやトラブルを避けたい。</p>
+        </article>
+
+        <article class="worry-card">
+          <span class="worry-no">03</span>
+          <h3>分割支払い</h3>
+          <p>一括だけでなく、購入者の支払い方法についても相談したい。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="support-section reveal">
+      <div class="support-copy">
+        <span class="section-en">LIBERAL SUPPORT</span>
+        <h2>売る人と買う人の間に、<br>LibeRalが入る。</h2>
+        <p>個人間だけでは不安になりやすい手続きや金銭取引をサポート。オーナーから次のオーナーへ、安心してクルマをつなげる環境をつくります。</p>
+      </div>
+
+      <div class="bridge-box">
+        <div class="bridge-owner">
+          <span>SELLER</span>
+          <strong>売主</strong>
+        </div>
+
+        <div class="bridge-line">
+          <i></i>
+          <b>LibeRal</b>
+          <i></i>
+        </div>
+
+        <div class="bridge-owner right">
+          <span>BUYER</span>
+          <strong>買主</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-list reveal">
+      <div class="support-item">
+        <span>01</span>
+        <div>
+          <h3>名義変更サポート</h3>
+          <p>車両の名義変更に関する手続きをサポートします。</p>
+        </div>
+      </div>
+
+      <div class="support-item">
+        <span>02</span>
+        <div>
+          <h3>金銭取引の仲介</h3>
+          <p>個人間で不安になりやすい車両代金のやり取りをサポートします。</p>
+        </div>
+      </div>
+
+      <div class="support-item">
+        <span>03</span>
+        <div>
+          <h3>分割支払いのサポート</h3>
+          <p>購入者の支払い方法についても幅広くご相談いただけます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="kojin-cta reveal">
+      <div>
+        <span class="cta-kicker">CONTACT</span>
+        <h3>個人売買でお悩みの際は、<br>お気軽にご相談ください。</h3>
+        <p>状況をお伺いし、必要なサポートをご案内します。</p>
+      </div>
+      <a href="contact.html" class="cta-button">お問い合わせ <span>→</span></a>
+    </section>
+
   </section>
+</main>
 
-  <!-- フッター -->
-  <footer>
-    <p>&copy; 2025 株式会社LibeRal（リベラル）</p>
-  </footer>
+<footer class="kojin-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">LibeRal</div>
+      <p>LibeRal and innovative car dealings</p>
+    </div>
+    <p>&copy; 2025-2026 株式会社LibeRal（リベラル）</p>
+  </div>
+</footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // ハンバーガー開閉
-      const hamburger = document.getElementById("hamburger");
-      const nav = document.getElementById("nav");
-      hamburger.addEventListener("click", function () {
-        nav.classList.toggle("active");
-      });
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const nav = document.getElementById("nav");
+  const header = document.querySelector(".site-header");
 
-      // サブメニュー開閉（スマホ用）
-      document.querySelectorAll(".toggle-submenu").forEach(function (el) {
-        el.addEventListener("click", function () {
-          if (window.innerWidth <= 768) {
-            const submenu = this.nextElementSibling;
-            submenu.style.display =
-              submenu.style.display === "block" ? "none" : "block";
-          }
-        });
-      });
+  hamburger.addEventListener("click", function () {
+    nav.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".toggle-submenu").forEach(function (el) {
+    el.addEventListener("click", function () {
+      if (window.innerWidth <= 980) {
+        const submenu = this.nextElementSibling;
+        submenu.style.display =
+          submenu.style.display === "block" ? "none" : "block";
+      }
     });
-  </script>
+  });
+
+  function updateHeader() {
+    header.classList.toggle("scrolled", window.scrollY > 40);
+  }
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.10 });
+
+  document.querySelectorAll(".reveal").forEach(function(el) {
+    observer.observe(el);
+  });
+});
+</script>
+
 </body>
 </html>
