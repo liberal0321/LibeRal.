@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ page.title }} | 株式会社LibeRal</title>
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/post.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <div class="logo-area">
+        <a href="{{ site.baseurl }}/index.html">
+          <img src="{{ site.baseurl }}/test.png" alt="株式会社LibeRal">
+        </a>
+      </div>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="{{ site.baseurl }}/index.html">ホーム</a></li>
+          <li><a href="{{ site.baseurl }}/zaiko.html">在庫車両</a></li>
+          <li><a href="{{ site.baseurl }}/kaitori.html">車両買取</a></li>
+          <li><a href="{{ site.baseurl }}/about.html">会社概要</a></li>
+          <li><a href="{{ site.baseurl }}/contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main class="post-page">
+
+    <section class="post-hero">
+
+      <div class="post-hero-inner">
+
+        <span class="post-category">
+          {{ page.category }}
+        </span>
+
+        <h1>{{ page.title }}</h1>
+
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%Y.%m.%d" }}
+        </time>
+
+      </div>
+
+    </section>
+
+
+    <article class="post-article">
+
+      {% if page.image %}
+      <div class="post-main-image">
+        <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.title }}">
+      </div>
+      {% endif %}
+
+
+      <div class="post-content">
+
+        {{ content }}
+
+      </div>
+
+      <div class="post-back">
+        <a href="{{ site.baseurl }}/news.html">
+          ← NEWS一覧へ戻る
+        </a>
+      </div>
+
+    </article>
+
+  </main>
+
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <span class="footer-brand">
+        株式会社LibeRal
+      </span>
+
+      <p>
+        &copy; 2025-2026 株式会社LibeRal（リベラル）
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
