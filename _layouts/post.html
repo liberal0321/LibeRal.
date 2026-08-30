@@ -14,23 +14,57 @@
 
   <header class="site-header">
     <div class="header-inner">
-
       <div class="logo-area">
-        <a href="{{ site.baseurl }}/index.html">
-          <img src="{{ site.baseurl }}/test.png" alt="株式会社LibeRal">
+        <a href="{{ site.baseurl }}/index.html" aria-label="株式会社LibeRal ホーム">
+          <img src="{{ site.baseurl }}/test.png" alt="株式会社LibeRal ロゴ" class="logo">
         </a>
       </div>
 
-      <nav>
+      <nav id="nav" aria-label="メインナビゲーション">
+        <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">☰</button>
+
         <ul class="menu">
           <li><a href="{{ site.baseurl }}/index.html">ホーム</a></li>
-          <li><a href="{{ site.baseurl }}/zaiko.html">在庫車両</a></li>
-          <li><a href="{{ site.baseurl }}/kaitori.html">車両買取</a></li>
-          <li><a href="{{ site.baseurl }}/about.html">会社概要</a></li>
+
+          <li class="dropdown">
+            <span class="toggle-submenu" tabindex="0" role="button" aria-expanded="false">オークション代行 ▼</span>
+            <ul class="submenu">
+              <li><a href="{{ site.baseurl }}/service.html">オークション代行とは</a></li>
+              <li><a href="{{ site.baseurl }}/daikouhanbai.html">代行販売</a></li>
+              <li><a href="{{ site.baseurl }}/daikoushuppin.html">代行出品</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <span class="toggle-submenu" tabindex="0" role="button" aria-expanded="false">車両販売 ▼</span>
+            <ul class="submenu">
+              <li><a href="{{ site.baseurl }}/hanbai.html">販売提案</a></li>
+              <li><a href="{{ site.baseurl }}/zaiko.html">在庫車両</a></li>
+              <li><a href="{{ site.baseurl }}/itaku.html">委託販売</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <span class="toggle-submenu" tabindex="0" role="button" aria-expanded="false">車両買取 ▼</span>
+            <ul class="submenu">
+              <li><a href="{{ site.baseurl }}/kaitori.html">高価買取の取り組み</a></li>
+              <li><a href="{{ site.baseurl }}/kojin.html">個人売買代行</a></li>
+              <li><a href="{{ site.baseurl }}/satei.html">査定依頼はコチラ</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <span class="toggle-submenu" tabindex="0" role="button" aria-expanded="false">会社概要 ▼</span>
+            <ul class="submenu">
+              <li><a href="{{ site.baseurl }}/about.html">会社概要</a></li>
+              <li><a href="{{ site.baseurl }}/ninka.html">認可・登録番号</a></li>
+            </ul>
+          </li>
+
           <li><a href="{{ site.baseurl }}/contact.html">お問い合わせ</a></li>
+          <li><a href="{{ site.baseurl }}/privacy.html">プライバシーポリシー</a></li>
         </ul>
       </nav>
-
     </div>
   </header>
 
@@ -97,6 +131,53 @@
     </div>
 
   </footer>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      const hamburger = document.getElementById("hamburger");
+      const nav = document.getElementById("nav");
+      const header = document.querySelector(".site-header");
+
+      function updateHeader(){
+        header.classList.toggle("scrolled", window.scrollY > 40);
+      }
+
+      updateHeader();
+      window.addEventListener("scroll", updateHeader, { passive: true });
+
+      if (hamburger) {
+        hamburger.addEventListener("click", function(){
+          const isOpen = nav.classList.toggle("active");
+          hamburger.setAttribute("aria-expanded", isOpen);
+          hamburger.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
+
+          document.querySelectorAll(".submenu").forEach(sub => {
+            if (window.innerWidth <= 980) sub.style.display = "none";
+          });
+        });
+      }
+
+      document.querySelectorAll(".toggle-submenu").forEach(el => {
+        const toggle = function(){
+          if(window.innerWidth <= 980){
+            const submenu = el.nextElementSibling;
+            const isOpen = submenu.style.display === "block";
+            submenu.style.display = isOpen ? "none" : "block";
+            el.setAttribute("aria-expanded", !isOpen);
+          }
+        };
+
+        el.addEventListener("click", toggle);
+        el.addEventListener("keydown", function(e){
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggle();
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
