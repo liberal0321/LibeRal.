@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -80,6 +83,46 @@
 
       <button class="hero-arrow left" id="prev" aria-label="前の画像">&#10094;</button>
       <button class="hero-arrow right" id="next" aria-label="次の画像">&#10095;</button>
+    </section>
+
+    <section class="home-news">
+      <div class="home-news-inner">
+
+        <div class="home-news-title">
+          <div>
+            <span class="home-news-kicker">NEWS &amp; TOPICS</span>
+            <h2>NEWS</h2>
+          </div>
+
+          <a href="news.html" class="home-news-all">
+            VIEW ALL <span>→</span>
+          </a>
+        </div>
+
+        <div class="home-news-list">
+          {% for post in site.posts limit:3 %}
+          <a href="{{ post.url | relative_url }}" class="home-news-item">
+
+            <div class="home-news-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%Y.%m.%d" }}
+              </time>
+
+              <span>{{ post.category }}</span>
+            </div>
+
+            <h3>{{ post.title }}</h3>
+
+            <span class="home-news-arrow">→</span>
+          </a>
+          {% endfor %}
+        </div>
+
+        {% if site.posts.size == 0 %}
+        <p class="home-news-empty">現在、お知らせはありません。</p>
+        {% endif %}
+
+      </div>
     </section>
 
     <section class="content-section intro" id="service">
