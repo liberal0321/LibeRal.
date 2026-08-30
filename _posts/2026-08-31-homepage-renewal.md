@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "公式ホームページをリニューアルしました"
-date: 2026-08-31
+date: 2026-08-30
 category: INFORMATION
 ---
 
