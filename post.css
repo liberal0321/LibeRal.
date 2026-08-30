@@ -281,3 +281,28 @@ body {
     text-align: left;
   }
 }
+
+/* =========================================================
+   NEWS PAGE HEADER
+   通常ページと同じ濃紺ヘッダーに固定
+   ========================================================= */
+.site-header{
+  background: rgba(5, 11, 20, .96) !important;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  box-shadow: none;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.site-header.scrolled{
+  background: rgba(5, 11, 20, .98) !important;
+}
+
+.site-header .menu > li > a,
+.site-header .toggle-submenu{
+  color: #fff !important;
+}
+
+.site-header .logo{
+  opacity: 1;
+}
