@@ -1,16 +1,9 @@
-{% assign footer_variant = include.variant | default: page.footer_variant | default: 'rich' %}
-{% assign footer_class = include.footer_class | default: page.footer_class %}
-{% assign copyright_years = include.copyright_years | default: page.copyright_years | default: '2025-2026' %}
-<footer{% if footer_class %} class="{{ footer_class }}"{% endif %}>
+<footer>
   <div class="footer-inner">
-    {% if footer_variant == 'simple' %}
-      <span class="footer-brand">株式会社LibeRal</span>
-    {% else %}
-      <div>
-        <div class="footer-brand">LibeRal</div>
-        <p>LibeRal and innovative car dealings</p>
-      </div>
-    {% endif %}
-    <p>&copy; {{ copyright_years }} 株式会社LibeRal（リベラル）</p>
+    <div>
+      <div class="footer-brand">LibeRal</div>
+      <p>LibeRal and innovative car dealings</p>
+    </div>
+    <p>&copy; 2025-2026 株式会社LibeRal（リベラル）</p>
   </div>
 </footer>
