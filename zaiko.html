@@ -10,7 +10,7 @@ copyright_years: "2025-2026"
   <title>在庫車両 | 株式会社LibeRal</title>
 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="zaiko.css">
+  <link rel="stylesheet" href="zaiko_fixed.css">
 </head>
 <body>
 
@@ -99,7 +99,7 @@ copyright_years: "2025-2026"
     </div>
 
     <div class="stock-toolbar">
-      <p><strong id="resultCount">4</strong> 台の在庫があります</p>
+      <p><strong id="resultCount">13</strong> 台の在庫があります</p>
       <label>
         <span>並び替え</span>
         <select id="sortFilter">
@@ -544,15 +544,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const nav = document.getElementById("nav");
   const header = document.querySelector(".site-header");
 
-  hamburger.addEventListener("click", function () {
-    nav.classList.toggle("active");
-  });
+  if (hamburger && nav) {
+    hamburger.addEventListener("click", function () {
+      nav.classList.toggle("active");
+    });
+  }
 
   document.querySelectorAll(".toggle-submenu").forEach(function (el) {
     el.addEventListener("click", function () {
       if (window.innerWidth <= 980) {
         const submenu = this.nextElementSibling;
-        submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        if (submenu) {
+          submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        }
       }
     });
   });
@@ -563,15 +567,22 @@ document.addEventListener("DOMContentLoaded", function () {
   updateHeader();
   window.addEventListener("scroll", updateHeader, { passive: true });
 
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) entry.target.classList.add("show");
-    });
-  }, { threshold: 0.08 });
+  const revealElements = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    }, { threshold: 0.08 });
 
-  document.querySelectorAll(".reveal").forEach(function(el) {
-    observer.observe(el);
-  });
+    revealElements.forEach(function(el) {
+      observer.observe(el);
+    });
+  } else {
+    revealElements.forEach(function(el) {
+      el.classList.add("show");
+    });
+  }
 
   const tabs = document.querySelectorAll(".search-tab");
   const contents = document.querySelectorAll(".search-content");
@@ -581,7 +592,8 @@ document.addEventListener("DOMContentLoaded", function () {
       tabs.forEach(t => t.classList.remove("active"));
       contents.forEach(c => c.classList.remove("active"));
       tab.classList.add("active");
-      document.getElementById(tab.dataset.tab).classList.add("active");
+      const target = document.getElementById(tab.dataset.tab);
+      if (target) target.classList.add("active");
     });
   });
 
@@ -629,7 +641,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const matchesYear = !year || Number(card.dataset.year) >= year;
       const matchesMileage = !mileage || Number(card.dataset.mileage) <= mileage;
       const matchesPrice = !price || Number(card.dataset.price) <= price;
-      const matchesKeyword = !keyword || card.dataset.keywords.toLowerCase().includes(keyword);
+      const keywords = (card.dataset.keywords || "").toLowerCase();
+      const matchesKeyword = !keyword || keywords.includes(keyword);
 
       const match = matchesMaker && matchesYear && matchesMileage && matchesPrice && matchesKeyword;
       card.hidden = !match;
