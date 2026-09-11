@@ -562,7 +562,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function updateHeader() {
-    header.classList.toggle("scrolled", window.scrollY > 40);
+    if (header) {
+      header.classList.toggle("scrolled", window.scrollY > 40);
+    }
   }
   updateHeader();
   window.addEventListener("scroll", updateHeader, { passive: true });
@@ -573,7 +575,7 @@ document.addEventListener("DOMContentLoaded", function () {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) entry.target.classList.add("show");
       });
-    }, { threshold: 0.08 });
+    }, { threshold: 0 });
 
     revealElements.forEach(function(el) {
       observer.observe(el);
