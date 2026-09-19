@@ -6,6 +6,14 @@
 
   <title>{{ page.title }} | 株式会社LibeRal</title>
 
+  {% if page.description %}
+  <meta name="description" content="{{ page.description | escape }}">
+  {% else %}
+  <meta name="description" content="{{ page.title | escape }}。株式会社LibeRalからのお知らせです。">
+  {% endif %}
+
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
   <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/post.css">
 </head>
