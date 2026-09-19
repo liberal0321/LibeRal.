@@ -4,12 +4,14 @@ permalink: /sitemap.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{% assign sitemap_pages = site.pages | where_exp: "item", "item.sitemap != false" %}
-{% for page in sitemap_pages %}
-  {% if page.url and page.url != "/sitemap.xml" and page.url != "/404.html" and page.url != "/comingsoon.html" %}
+
+{% for page in site.pages %}
+  {% if page.url == "/" or page.url contains ".html" %}
+    {% unless page.url == "/404.html" or page.url == "/comingsoon.html" or page.url contains "README" %}
   <url>
     <loc>{{ page.url | absolute_url | xml_escape }}</loc>
   </url>
+    {% endunless %}
   {% endif %}
 {% endfor %}
 
@@ -19,4 +21,5 @@ permalink: /sitemap.xml
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
   </url>
 {% endfor %}
+
 </urlset>
