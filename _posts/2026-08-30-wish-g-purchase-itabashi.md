@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "トヨタ ウィッシュ G リフトアップシート車を買取させていただきました"
+title: "東京都 板橋区でトヨタ ウィッシュ G リフトアップシート車を買取いたしました"
+description: "株式会社LibeRalの買取実績。東京都板橋区にてトヨタ ウィッシュ G リフトアップシート車を買取いたしました。中古車の買取・売却もご相談ください。"
 date: 2026-08-30 12:00:00 +0900
 category: PURCHASE
 image: "/images/purchase/wish-g-20260830.jpeg"
