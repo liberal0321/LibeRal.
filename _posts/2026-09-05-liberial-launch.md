@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "オリジナルアパレルブランド「LibeRial」を立ち上げました"
+description: "株式会社LibeRalは、オリジナルアパレルブランド「LibeRial（リベリアル）」を立ち上げました。ブランドコンセプトや商品についてご紹介します。"
+date: 2026-09-05
 date: 2026-09-05
 category: NEWS
 image: /images/purchase/liberial-collection.jpg
