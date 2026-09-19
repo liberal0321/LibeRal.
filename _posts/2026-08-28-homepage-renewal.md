@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "公式ホームページをリニューアルしました"
+description: "株式会社LibeRalの公式ホームページをリニューアルしました。サービス内容や在庫車両、買取・販売情報などをより分かりやすくお届けしてまいります。"
 date: 2026-08-28
 category: INFORMATION
 ---
