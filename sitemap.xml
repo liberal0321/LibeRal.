@@ -1,68 +1,22 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+{% assign sitemap_pages = site.pages | where_exp: "item", "item.sitemap != false" %}
+{% for page in sitemap_pages %}
+  {% if page.url and page.url != "/sitemap.xml" and page.url != "/404.html" and page.url != "/comingsoon.html" %}
   <url>
-    <loc>https://liberal-inc.jp/</loc>
+    <loc>{{ page.url | absolute_url | xml_escape }}</loc>
   </url>
+  {% endif %}
+{% endfor %}
 
+{% for post in site.posts %}
   <url>
-    <loc>https://liberal-inc.jp/about.html</loc>
+    <loc>{{ post.url | absolute_url | xml_escape }}</loc>
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
   </url>
-
-  <url>
-    <loc>https://liberal-inc.jp/service.html</loc>
-  </url>
-
-  <url>
-    <loc>https://liberal-inc.jp/daikouhanbai.html</loc>
-  </url>
-
-  <url>
-    <loc>https://liberal-inc.jp/daikoushuppin.html</loc>
-  </url>
-
-  <url>
-    <loc>https://liberal-inc.jp/hanbai.html</loc>
-  </url>
-
-  <url>
-    <loc>https://liberal-inc.jp/zaiko.html</loc>
-  </url>
-
-  <url>
-    <loc>https://liberal-inc.jp/itaku.html</loc>
-  </url>
-
-  <url>
-    <loc>https://liberal-inc.jp/kaitori.html</loc>
-  </url>
-
-  <url>
-    <loc>https://liberal-inc.jp/kojin.html</loc>
-  </url>
-
-  <url>
-    <loc>https://liberal-inc.jp/satei.html</loc>
-  </url>
-
-  <url>
-    <loc>https://liberal-inc.jp/ninka.html</loc>
-  </url>
-
-  <url>
-    <loc>https://liberal-inc.jp/news.html</loc>
-  </url>
-
-  <url>
-    <loc>https://liberal-inc.jp/recruit.html</loc>
-  </url>
-
-  <url>
-    <loc>https://liberal-inc.jp/contact.html</loc>
-  </url>
-
-  <url>
-    <loc>https://liberal-inc.jp/privacy.html</loc>
-  </url>
-
+{% endfor %}
 </urlset>
