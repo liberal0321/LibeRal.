@@ -340,3 +340,20 @@ body {
     max-height: none;
   }
 }
+/* =========================
+   記事本文・画像のはみ出し防止
+========================= */
+
+.post-content {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.post-content img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 32px auto;
+  box-sizing: border-box;
+}
