@@ -48,7 +48,6 @@ description: "株式会社LibeRalはデントリペア事業を開始しまし�
     <p>デントリペアでは、専用の照明でパネル表面のゆがみを確認しながら、工具を使ってへこみを調整します。</p>
     <figure class="dent-work">
       <img src="{{ '/images/news/dent-repair/dent-work-illustration.jpg' | relative_url }}" alt="デントリペアの作業工程を表現したイメージ画像" loading="lazy">
-      <figcaption>作業工程のイメージ</figcaption>
     </figure>
   </section>
 
