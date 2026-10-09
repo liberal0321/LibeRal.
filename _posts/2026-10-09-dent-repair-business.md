@@ -40,7 +40,7 @@ description: "株式会社LibeRalはデントリペア事業を開始しまし�
       <div class="dent-arrow" aria-hidden="true">›</div>
       <figure class="dent-after"><img src="{{ '/images/news/dent-repair/dent-04.jpg' | relative_url }}" alt="デントリペア施工事例2 施工後のボンネット" loading="lazy"><figcaption>施工後 / AFTER</figcaption></figure>
     </div>
-    <p class="dent-note">※施工前後の写真はご提供いただいた実車写真です。修復の可否・仕上がりはへこみの位置、深さ、塗装状態などによって異なります。</p>
+    <p class="dent-note">※施工前後の写真は実車写真です。修復の可否・仕上がりはへこみの位置、深さ、塗装状態などによって異なります。</p>
   </section>
 
   <section class="dent-section">
@@ -48,7 +48,7 @@ description: "株式会社LibeRalはデントリペア事業を開始しまし�
     <p>デントリペアでは、専用の照明でパネル表面のゆがみを確認しながら、工具を使ってへこみを調整します。</p>
     <figure class="dent-work">
       <img src="{{ '/images/news/dent-repair/dent-work-illustration.jpg' | relative_url }}" alt="デントリペアの作業工程を表現したイメージ画像" loading="lazy">
-      <figcaption>作業工程のイメージ（AI生成画像。実際の当社施工風景ではありません）</figcaption>
+      <figcaption>作業工程のイメージ</figcaption>
     </figure>
   </section>
 
