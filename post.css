@@ -357,3 +357,20 @@ body {
   margin: 32px auto;
   box-sizing: border-box;
 }
+/* NEWS記事内の画像の余白を解消 */
+.post-content img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto !important;
+  object-fit: contain;
+  margin: 24px auto;
+}
+
+/* 画像を囲む要素の余分な背景を削除 */
+.post-content figure,
+.post-content p:has(> img) {
+  height: auto !important;
+  min-height: 0 !important;
+  background: transparent !important;
+}
