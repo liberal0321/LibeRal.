@@ -39,7 +39,7 @@ image: /images/news/50cars/rocky-hv.jpg
   </div>
 
   <p><strong>株式会社LibeRalは、このたび累計買取台数50台を達成いたしました。</strong></p>
-  <p>記念すべき50台目は、福島県福島市にてお買取りした<strong>ダイハツ ロッキー ハイブリッド</strong>です。</p>
+  <p>記念すべき50台目は、福島県福島市にて買取りした<strong>ダイハツ ロッキー ハイブリッド</strong>です。</p>
 
   <div class="facts">
     <div class="fact"><small>50台目の買取車両</small><strong>ダイハツ ロッキー ハイブリッド</strong></div>
