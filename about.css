@@ -398,3 +398,13 @@ body {
     min-height: 340px;
   }
 }
+
+/* 会社概要の各項目の余白を統一 */
+.company-list > .company-row {
+  margin: 0 !important;
+}
+
+/* 項目間に余分な要素がある場合の確認用 */
+.company-list > .company-row + .company-row {
+  margin-top: 0 !important;
+}
