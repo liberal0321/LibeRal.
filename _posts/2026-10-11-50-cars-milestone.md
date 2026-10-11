@@ -74,3 +74,100 @@ image: /images/news/50cars/rocky-hv.jpg
     <p><strong>次の目標となる累計100台に向けて、これからも一台一台のご縁を大切に、着実に実績を積み重ねてまいります。</strong></p>
   </section>
 </div>
+
+<section class="liberal-recruit">
+  <div class="liberal-recruit-inner">
+    <span class="liberal-recruit-label">JOIN OUR TEAM</span>
+
+    <h2>一緒にLibeRalを成長させる<br>仲間を募集しています。</h2>
+
+    <p>
+      今回の50台目の買取も、営業担当と引き取り担当の
+      連携によって実現しました。
+    </p>
+
+    <p>
+      LibeRalでは、一人ひとりの行動力や挑戦を大切にしながら、
+      中古車買取事業の拡大に取り組んでいます。
+    </p>
+
+    <p>
+      自動車業界で新しいことに挑戦したい方、
+      自分の力を活かして働きたい方。
+      私たちと一緒に、次の100台、その先の成長を目指しませんか？
+    </p>
+
+    <a href="{{ '/recruit.html' | relative_url }}" class="liberal-recruit-button">
+      採用情報を見る →
+    </a>
+  </div>
+</section>
+
+<style>
+.liberal-recruit {
+  margin: 48px 0 16px;
+  padding: 42px 28px;
+  background: linear-gradient(135deg, #071321 0%, #123b65 100%);
+  border-radius: 6px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.liberal-recruit-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.liberal-recruit-label {
+  display: block;
+  color: #8dc5ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-bottom: 14px;
+}
+
+.liberal-recruit h2 {
+  color: #ffffff !important;
+  font-size: clamp(21px, 3vw, 28px);
+  line-height: 1.6;
+  margin: 0 0 24px;
+  border: none;
+  padding: 0;
+}
+
+.liberal-recruit p {
+  color: #dce8f5;
+  font-size: 14px;
+  line-height: 2;
+  margin: 0 0 16px;
+}
+
+.liberal-recruit-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 36px;
+  background: #0876e8;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.liberal-recruit-button:hover {
+  background: #2591ff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .liberal-recruit {
+    padding: 32px 20px;
+  }
+
+  .liberal-recruit p {
+    font-size: 13px;
+  }
+}
+</style>
