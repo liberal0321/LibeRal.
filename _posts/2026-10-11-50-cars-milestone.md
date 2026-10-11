@@ -61,7 +61,7 @@ image: /images/news/50cars/rocky-hv.jpg
     <h2 class="section-title">記念すべき50台目の車両</h2>
     <figure class="vehicle">
       <img src="{{ '/images/news/50cars/rocky-hv.jpg' | relative_url }}" alt="福島県福島市で買取した累計50台目のダイハツ ロッキー ハイブリッド" loading="lazy">
-      <figcaption>福島県福島市でお買取りしたダイハツ ロッキー ハイブリッド</figcaption>
+      <figcaption>福島県福島市で買取りしたダイハツ ロッキー ハイブリッド</figcaption>
     </figure>
   </section>
 
