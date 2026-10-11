@@ -79,7 +79,7 @@ image: /images/news/50cars/rocky-hv.jpg
   <div class="liberal-recruit-inner">
     <span class="liberal-recruit-label">JOIN OUR TEAM</span>
 
-    <h2>一緒にLibeRalを成長させる<br>仲間を募集しています。</h2>
+    <h2>挑戦する仲間と<br>自動車流通の未来を創る。</h2>
 
     <p>
       今回の50台目の買取も、営業担当と引き取り担当の
@@ -92,9 +92,17 @@ image: /images/news/50cars/rocky-hv.jpg
     </p>
 
     <p>
-      自動車業界で新しいことに挑戦したい方、
-      自分の力を活かして働きたい方。
-      私たちと一緒に、次の100台、その先の成長を目指しませんか？
+      **今のオーナーから、次のオーナーへ。**
+
+私たちLibeRalが目指すのは、ただ自動車を売買することではありません。
+
+「自由で革新的な自動車の売買」という理念のもと、既存の常識にとらわれず、新たな価値と体験を生み出していくこと。
+
+一人ひとりの挑戦が、会社の可能性を広げ、自動車流通の未来を変えていく。
+
+**ともに挑み、ともに成長しよう。**
+
+LibeRalの次のステージを、ともに創る仲間を募集しています。
     </p>
 
     <a href="{{ '/recruit.html' | relative_url }}" class="liberal-recruit-button">
