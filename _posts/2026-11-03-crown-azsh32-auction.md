@@ -7,7 +7,7 @@ categories: [news]
 
 株式会社LibeRalでは、このたびトヨタ クラウン（AZSH32）を、オークション代行にてお客様のご希望に沿った仕様で落札・販売いたしました。
 
-![パールホワイトのクラウン AZSH32 フロント外観（イメージ）]({{ '/assets/images/crown-azsh32/front.png' | relative_url }})
+![パールホワイトのクラウン AZSH32 フロント外観（イメージ）]({{ '/images/crown-azsh32/front.png' | relative_url }})
 
 ## こだわりの条件をすべて満たす一台を探して
 
@@ -21,7 +21,7 @@ categories: [news]
 
 カーセンサーやグーネットでも、ご希望の条件をすべて満たす車両は見つからず、業者オークションでの車両探しをご依頼いただきました。
 
-![クラウン AZSH32 リア外観（イメージ）]({{ '/assets/images/crown-azsh32/rear.png' | relative_url }})
+![クラウン AZSH32 リア外観（イメージ）]({{ '/images/crown-azsh32/rear.png' | relative_url }})
 
 ## 直近1年間の落札実績は、わずか3台
 
@@ -35,15 +35,15 @@ categories: [news]
 
 そのため、オークション会場での下見を行い、ボディはもちろん、アルミホイールのガリ傷の有無なども確認。希望装備だけで判断せず、車両状態にも納得できる一台を選定しました。
 
-![ブラックスパッタリングアルミホイール（イメージ）]({{ '/assets/images/crown-azsh32/wheel.png' | relative_url }})
+![ブラックスパッタリングアルミホイール（イメージ）]({{ '/images/crown-azsh32/wheel.png' | relative_url }})
 
 ## 茶革内装とパノラマルーフにもこだわり
 
 落ち着いた茶革シートと開放感のあるパノラマルーフは、今回の車両探しに欠かせない条件でした。外観だけでなく、室内で過ごす時間の質にもこだわったオーダーです。
 
-![茶革シートを備えた内装（イメージ）]({{ '/assets/images/crown-azsh32/interior.png' | relative_url }})
+![茶革シートを備えた内装（イメージ）]({{ '/images/crown-azsh32/interior.png' | relative_url }})
 
-![パノラマルーフ（イメージ）]({{ '/assets/images/crown-azsh32/panorama.png' | relative_url }})
+![パノラマルーフ（イメージ）]({{ '/images/crown-azsh32/panorama.png' | relative_url }})
 
 ## 希望条件に完全一致、予算内で無事に落札
 
